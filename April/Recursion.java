@@ -1,6 +1,6 @@
 public class Recursion {
     public static void main(String[] args) {
-        print(1);
+        System.out.println(fibo(4));
     }
 
     private static void print(int i) {
@@ -10,5 +10,12 @@ public class Recursion {
         }
         System.out.println(i);
         print(i + 1);
+    }
+
+    public static int fibo(int n) {
+        if (n < 2) {
+            return n;
+        }
+        return fibo(n - 1) + fibo(n - 1);
     }
 }
